@@ -14,20 +14,16 @@ import javax.ws.rs.core.MediaType;
  *
  * @author alex
  */
+@Path("media")
+public class MediaResource {
 
-@Path("aliens")
-public class AlienResource {    
-    
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    //@Produces(MediaType.APPLICATION_XML)
-    public Alien getAlien(){
+    public Media getMedia(){
         
-        Alien al = new Alien();
-        al.setName("alex");
-        al.setPoints(29);
-         System.out.println("exit alien" + al);
-        return al;
+        Media media = new Media("http", "peli");
+        System.out.println("exit media " + media);
+        return media;        
     }
     
 }
